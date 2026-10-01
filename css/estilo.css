@@ -280,13 +280,11 @@ ul {
     border-radius: var(--border-radius);
     margin: 40px auto;
     gap: 40px;
-    
 }
 
 .info-text {
     flex: 1;
     text-align: left;
-   
 }
 
 .info-text h2 {
@@ -296,12 +294,10 @@ ul {
 }
 
 .info-text .subtitle {
-
     color: var(--card-text-1);
 }
 
 .info-text .btn-link {
-
     color: var(--card-text-1);
 }
 
@@ -319,9 +315,7 @@ ul {
     margin-bottom: 25px; 
 }
 
-/* =========================================
-   BLOQUE INVERTIDO (Imagen izq. / Texto der.)
-   ========================================= */
+/* Bloque Invertido (Imagen izq. / Texto der.) */
 .info-block-reverse {
     display: flex;
     flex-direction: row-reverse;
@@ -335,14 +329,14 @@ ul {
 .info-block-reverse .info-text {
     margin-left: auto;
     text-align: right;
-    max-width: 500px; /* Consolidado en un solo valor limpio */
+    max-width: 500px;
 }
 
 .info-block-reverse .info-text p {
     text-align: right;
     margin-left: auto;
     margin-right: 0;
-    margin-bottom: 25px; /* Añade separación extra entre el párrafo y el enlace */
+    margin-bottom: 25px;
 }
 
 .info-block-reverse .info-image {
@@ -353,6 +347,24 @@ ul {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
+}
+
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header-flex .section-title {
+    margin-bottom: 0;
+}
+
+.text-block-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
 /* =========================================
@@ -504,7 +516,8 @@ footer {
    RESPONSIVIDAD
    ========================================= */
 @media (max-width: 768px) {
-    .hero, .info-block, .newsletter-content {
+    /* 1. Forzamos la columna en TODAS las secciones */
+    .hero, .info-block, .info-block-reverse, .newsletter-content {
         flex-direction: column;
         text-align: center;
     }
@@ -547,34 +560,40 @@ footer {
         justify-content: center;
         gap: 10px;
     }
-}
 
-.section-header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.section-header-flex .section-title {
-    margin-bottom: 0;
-}
-
-/* Bloque de texto centrado para la sección de juegos */
-.text-block-2col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-}
-
-@media (max-width: 768px) {
     .text-block-2col {
         grid-template-columns: 1fr;
     }
+
+    /* 2. Centramos el texto del bloque invertido que en escritorio iba a la derecha */
+    .info-block-reverse .info-text {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .info-block-reverse .info-text p {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* 3. Aseguramos que los contenedores de las imágenes cojan el ancho completo */
+    .info-block .info-image,
+    .info-block-reverse .info-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* 4. Las imágenes ocupan TODO el ancho en móvil, igual que la del sillón */
+    .info-block img,
+    .info-block-reverse img {
+        width: 100%;
+        max-width: 100%; 
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
 }
-
-
 
 /* =========================================
    ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
