@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria Viva | Acompañamiento</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="funciones.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="Logotipo de Memoria Viva" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Inicio</a></li>
+                    <li><a href="juegos.html" class="nav-item">Juegos</a></li>
+                    <li><a href="acompanamiento.html" class="nav-item active">Acompañamiento</a></li>
+                    <li><a href="recursos.html" class="nav-item">Recursos útiles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section active">
+            <!-- 1. Sección Hero Principal de Acompañamiento -->
+            <div class="container hero">
+                <div class="hero-text">
+                    <h1>Acompañamiento<br>para familiares y<br>cuidadores</h1>
+                    <p>Encuentra consejos, orientación y apoyo para afrontar el día a día junto a una persona con Alzheimer.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="imagenes/Acomp_hero.png" alt="Ilustración de una persona mayor y un familiar leyendo un álbum de fotos juntos" style="width: 100%; height: auto; border-radius: 16px;">
+                </div>
+            </div>
+
+            <!-- 2. Sección Cuidar también es acompañar -->
+            <div class="container info-block">
+                <div class="info-text">
+                    <h2>Cuidar también es acompañar</h2>
+                    <p>Cuidar de una persona con Alzheimer implica afrontar nuevos retos y adaptarse a los cambios que produce la enfermedad. Contar con información y estrategias adecuadas puede ayudar a ofrecer un apoyo más seguro y mejorar el bienestar de toda la familia.</p>
+                    <p>Cada persona vive el Alzheimer de forma diferente. Mantener una comunicación cercana, respetar sus tiempos y fomentar un entorno tranquilo son aspectos clave para favorecer una mejor calidad de vida.</p>
+                </div>
+                <div class="info-image">
+                    <img src="imagenes/Acomp_cuidar tambien es acompañar.png" alt="Ilustración representativa de apoyo y acompañamiento" style="width: 100%; height: auto; border-radius: 16px;">
+                </div>
+            </div>
+
+            <!-- 3. Sección Guías para el cuidado diario (Grid de 4 tarjetas con iconos) -->
+            <div class="container section-padding"> 
+                <h2 class="section-title">Guías para el cuidado diario</h2>
+                <div class="grid-4">
+                    <div class="card card-info">
+                        <img src="imagenes/icono_comunicacion.png" alt="Icono de comunicación" class="card-icon">
+                        <h3>Comunicación</h3>
+                        <p>Aprende cómo comunicarte de forma clara, paciente y respetuosa en cada etapa de la enfermedad.</p>
+                        <a href="#" class="card-link">Leer más &rarr;</a>
+                    </div>
+                    <div class="card card-acompanamiento">
+                        <img src="imagenes/Acomp_hero.png" alt="Icono de cuidados diarios" class="card-icon">
+                        <h3>Cuidados diarios</h3>
+                        <p>Consejos para facilitar las rutinas, promover la autonomía y crear un entorno seguro.</p>
+                        <a href="#" class="card-link">Leer más &rarr;</a>
+                    </div>
+                    <div class="card card-juegos">
+                        <img src="imagenes/acomp_emocional.png" alt="Icono de bienestar emocional" class="card-icon">
+                        <h3>Bienestar emocional</h3>
+                        <p>Recomendaciones para cuidar tanto a la persona con Alzheimer como a quien la acompaña.</p>
+                        <a href="#" class="card-link">Leer más &rarr;</a>
+                    </div>
+                    <div class="card card-recursos">
+                        <img src="imagenes/acomp_apoyo familiar.png" alt="Icono de apoyo familiar" class="card-icon">
+                        <h3>Apoyo familiar</h3>
+                        <p>Descubre recursos y pautas para afrontar juntos los cambios que implica la enfermedad.</p>
+                        <a href="#" class="card-link">Leer más &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Sección Preguntas frecuentes (Acordeón) -->
+            <div class="container section-padding" style="padding-top: 0;">
+                <h2 class="section-title">Preguntas frecuentes</h2>
+                <div class="faq-container">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿Cómo puedo comunicarme mejor con una persona con Alzheimer?
+                            <span class="faq-icon">&rsaquo;</span>
+                        </button>
+                        <div class="faq-answer-container">
+                            <p class="faq-answer">Utiliza frases sencillas, habla con calma y mantén el contacto visual. Escuchar con paciencia ayuda a reducir la frustración y facilita la comunicación.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿Cómo puedo hacer el hogar más seguro?
+                            <span class="faq-icon">&rsaquo;</span>
+                        </button>
+                        <div class="faq-answer-container">
+                            <p class="faq-answer">Elimina obstáculos, mejora la iluminación y establece rutinas diarias para favorecer la orientación y la autonomía.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            ¿Es importante que el cuidador también se cuide?
+                            <span class="faq-icon">&rsaquo;</span>
+                        </button>
+                        <div class="faq-answer-container">
+                            <p class="faq-answer">Sí. Descansar, pedir ayuda cuando sea necesario y dedicar tiempo al bienestar personal permite ofrecer un mejor acompañamiento.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="imagenes/Logo.png" alt="Logotipo de Memoria Viva" class="logo-img">
+            </div>
+            
+            <div class="footer-right-group">
+                <div class="footer-info">
+                    <p>Información y recursos sobre el Alzheimer</p>
+                    <p class="copyright">&copy; 2026 - Proyecto académico</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Contacto</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Aviso legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

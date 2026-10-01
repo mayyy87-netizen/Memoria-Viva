@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria Viva | Juegos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="funciones.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="Logotipo de Memoria Viva" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Inicio</a></li>
+                    <li><a href="juegos.html" class="nav-item active">Juegos</a></li>
+                    <li><a href="acompanamiento.html" class="nav-item">Acompañamiento</a></li>
+                    <li><a href="recursos.html" class="nav-item">Recursos útiles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section active">
+            <!-- 1. Sección Hero Principal de Juegos -->
+            <div class="container hero">
+                <div class="hero-text">
+                    <h1>Juegos para<br>estimular la<br>mente</h1>
+                    <p>Descubre actividades sencillas diseñadas para trabajar la memoria, la atención y el lenguaje de forma entretenida.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="imagenes/Juegos-hero.png" alt="Ilustración de cartas y barajas para juegos de estimulación cognitiva" style="width: 100%; height: auto; border-radius: 16px;">
+                </div>
+            </div>
+
+            <!-- 2. Sección ¿Por qué son importantes los juegos? -->
+            <div class="container section-padding">
+                <h2 class="section-title">¿Por qué son importantes los juegos?</h2>
+                <div class="text-block-2col">
+                    <p>Los juegos de estimulación cognitiva son una herramienta útil para mantener activas capacidades como la memoria, la atención, el lenguaje o el razonamiento. Realizados de forma regular y adaptados a cada persona, pueden favorecer el mantenimiento de estas funciones y proporcionar momentos de entretenimiento.</p>
+                    <p>Estas actividades no sustituyen el tratamiento ni la atención de los profesionales sanitarios, pero sí pueden complementar el cuidado diario. Lo más importante es que se realicen en un ambiente tranquilo, respetando siempre el ritmo y las necesidades de cada persona.</p>
+                </div>
+            </div>
+
+            <!-- 3. Sección Juegos destacados (Grid de 4 tarjetas) -->
+            <div class="container section-padding">
+                <h2 class="section-title">Juegos destacados</h2>
+                <div class="grid-4">
+                    <div class="card card-info">
+                        <img src="imagenes/Icon acompa.png" alt="Icono de emparejar" class="card-icon">
+                        <h3>Empareja las imágenes</h3>
+                        <p>Encuentra las parejas iguales para ejercitar la memoria visual.</p>
+                        <a href="juego_memoria.html" class="card-link">Comenzar &rarr;</a>
+                    </div>
+                    <div class="card card-acompanamiento">
+                        <img src="imagenes/juego_completa la palabra.png" alt="Icono de completar palabra" class="card-icon">
+                        <h3>Completa la palabra</h3>
+                        <p>Adivina la palabra que falta observando las letras disponibles.</p>
+                        <a href="juego_palabra.html" class="card-link">Comenzar &rarr;</a>
+                    </div>
+                    <div class="card card-juegos">
+                        <img src="imagenes/juegos_encuentra diferencia.png" alt="Icono de diferencias" class="card-icon">
+                        <h3>Encuentra las diferencias</h3>
+                        <p>Observa dos imágenes e identifica los pequeños cambios.</p>
+                        <a href="#" class="card-link">Comenzar &rarr;</a>
+                    </div>
+                    <div class="card card-recursos">
+                        <img src="imagenes/juego_ordena secuencia.png" alt="Icono de secuencia" class="card-icon">
+                        <h3>Ordena la secuencia</h3>
+                        <p>Coloca los elementos en el orden correcto para trabajar la memoria y la lógica.</p>
+                        <a href="#" class="card-link">Comenzar &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Sección Categorías de Juegos -->
+            <div class="container section-padding" style="padding-top: 0;">
+                <div class="section-header-flex">
+                    <h2 class="section-title">Juegos</h2>
+                    <a href="#" class="card-link">Ver todos &rarr;</a>
+                </div>
+                
+                <div class="grid-4">
+                    <div class="card card-info">
+                        <img src="imagenes/juego_memoria.png" alt="Icono de memoria" class="card-icon">
+                        <h3>Memoria</h3>
+                        <p>Juegos para ejercitar el recuerdo de imágenes, palabras y secuencias de forma entretenida.</p>
+                        <a href="juego_memoria.html" class="card-link">Jugar &rarr;</a>
+                    </div>
+                    <div class="card card-acompanamiento">
+                        <img src="imagenes/Icon info .png" alt="Icono de lenguaje" class="card-icon">
+                        <h3>Lenguaje</h3>
+                        <p>Ejercicios para reforzar el vocabulario, la comprensión y la comunicación.</p>
+                        <a href="juego_palabra.html" class="card-link">Jugar &rarr;</a>
+                    </div>
+                    <div class="card card-juegos">
+                        <img src="imagenes/juego_atencion.png" alt="Icono de atención" class="card-icon">
+                        <h3>Atención</h3>
+                        <p>Actividades que ayudan a mejorar la concentración y la percepción visual.</p>
+                        <a href="#" class="card-link">Jugar &rarr;</a>
+                    </div>
+                    <div class="card card-recursos">
+                        <img src="imagenes/juego_logica.png" alt="Icono de lógica y razonamiento" class="card-icon">
+                        <h3>Lógica y razonamiento</h3>
+                        <p>Desafíos pensados para estimular el pensamiento, la resolución de problemas y la agilidad mental.</p>
+                        <a href="#" class="card-link">Jugar  &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="imagenes/Logo.png" alt="Logotipo de Memoria Viva" class="logo-img">
+            </div>
+            
+            <div class="footer-right-group">
+                <div class="footer-info">
+                    <p>Información y recursos sobre el Alzheimer</p>
+                    <p class="copyright">&copy; 2026 - Proyecto académico</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Contacto</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Aviso legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

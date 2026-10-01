@@ -1,0 +1,861 @@
+/* =========================================
+   VARIABLES GLOBALES (:root)
+   ========================================= */
+:root {
+    --color-memoria: #026d0f;       
+    --color-viva: #846b98;          
+    --primary-accent: #f8b133;  
+    --color-cards: #bde6e4;     
+    
+    --text-dark: #2d3748;           
+    --text-light: #718096;          
+    
+    --bg-main: #ffffff;             
+    --bg-secondary: #FFF6F6;        
+    --border-color: #e2e8f0;        
+    
+    --footer-bg: #ededed;           
+
+    --card-bg-1: #fcf1ed;           
+    --card-text-1: #7c42c3;         
+
+    --card-bg-2: #fef8e7;           
+    --card-text-2: #d99b1e;         
+
+    --card-bg-3: #eaf6fd;           
+    --card-text-3: #0284c7;         
+
+    --card-bg-4: #f4f0fa;           
+    --card-text-4: #846b98;         
+    
+    --font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --border-radius: 16px;
+    --transition-speed: 0.3s;
+}
+
+/* =========================================
+   RESET Y ESTILOS BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-dark);
+    background-color: var(--bg-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color var(--transition-speed);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   NAVEGACIÓN (HEADER) Y LOGO
+   ========================================= */
+.navbar {
+    background-color: var(--bg-main);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-memoria);
+}
+
+.logo span {
+    color: var(--color-viva);
+}
+
+.logo-img {
+    max-height: 120px;
+    width: auto;
+    display: block; 
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: var(--primary-accent);
+}
+
+/* =========================================
+   ESTRUCTURA DE SECCIONES Y GRID
+   ========================================= */
+.section-padding {
+    padding: 60px 20px;
+}
+
+/* Títulos más grandes */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--color-memoria);
+}
+
+/* Párrafos más estrechos */
+.hero-text p, 
+.text-block-center p, 
+.info-text p {
+    max-width: 400px;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+/* =========================================
+   HERO SECTIONS
+   ========================================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 20px;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--color-memoria);
+}
+
+.hero-image {
+    flex: 1.5;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* =========================================
+   TARJETAS (CARDS) CON ICONOS ARRIBA
+   ========================================= */
+.card {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 30px 24px;
+    min-height: 300px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    align-items: center;
+    
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Estilo para los iconos en la parte superior de las cards */
+.card-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 16px;
+
+}
+
+.card.card-info {
+    background-color: var(--card-bg-1);
+    border-color: transparent;
+}
+.card.card-info h3, .card.card-info .card-link {
+    color: var(--card-text-1);
+    text-align: center;
+}
+
+.card.card-acompanamiento {
+    background-color: var(--card-bg-2);
+    border-color: transparent;
+}
+.card.card-acompanamiento h3, .card.card-acompanamiento .card-link {
+    color: var(--card-text-2);
+}
+
+.card.card-juegos {
+    background-color: var(--card-bg-3);
+    border-color: transparent;
+}
+.card.card-juegos h3, .card.card-juegos .card-link {
+    color: var(--card-text-3);
+}
+
+.card.card-recursos {
+    background-color: var(--card-bg-4);
+    border-color: transparent;
+}
+.card.card-recursos h3, .card.card-recursos .card-link {
+    color: var(--card-text-4);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    font-weight: 600;
+    display: inline-block;
+    color: #7c42c3;
+}
+
+.card-link:hover {
+    opacity: 0.8;
+}
+
+/* =========================================
+   BLOQUES DE TEXTO EXTRA Y COMPONENTES
+   ========================================= */
+.info-block {
+    display: flex;
+    align-items: center;
+    padding: 60px 40px;
+    border-radius: var(--border-radius);
+    margin: 40px auto;
+    gap: 40px;
+    
+}
+
+.info-text {
+    flex: 1;
+    text-align: left;
+   
+}
+
+.info-text h2 {
+    color: var(--color-memoria);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.info-text .subtitle {
+
+    color: var(--card-text-1);
+}
+
+.info-text .btn-link {
+
+    color: var(--card-text-1);
+}
+
+.info-image {
+    flex: 1.5;
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.info-block .info-text p {
+    margin-bottom: 25px; 
+}
+
+/* =========================================
+   BLOQUE INVERTIDO (Imagen izq. / Texto der.)
+   ========================================= */
+.info-block-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 60px 40px;
+    border-radius: var(--border-radius);
+    margin: 40px auto;
+    gap: 40px;
+}
+
+.info-block-reverse .info-text {
+    margin-left: auto;
+    text-align: right;
+    max-width: 500px; /* Consolidado en un solo valor limpio */
+}
+
+.info-block-reverse .info-text p {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 25px; /* Añade separación extra entre el párrafo y el enlace */
+}
+
+.info-block-reverse .info-image {
+    flex: 1.5;
+}
+
+.info-block-reverse .info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* =========================================
+   NEWSLETTER (Dos columnas con fondo de color)
+   ========================================= */
+.newsletter-section {
+    background-color: var(--bg-secondary);
+    padding: 80px 0;
+    margin-top: 60px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.newsletter-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.newsletter-text {
+    flex: 1;
+}
+
+.newsletter-section h2 {
+    color: var(--color-memoria);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-section p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--bg-main);
+}
+
+/* Estilo del botón de suscripción */
+.btn-primary {
+    background-color: var(--color-memoria);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: opacity var(--transition-speed);
+}
+
+.btn-primary:hover {
+    opacity: 0.8;
+}
+
+/* Contenedor e imagen de la newsletter al lado */
+.newsletter-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.newsletter-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+.newsletter-text .newsletter-success-msg {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-memoria);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: var(--footer-bg);
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo img.logo-img {
+    max-height: 120px;
+    width: auto;
+    display: block;
+}
+
+.footer-right-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.footer-info .copyright {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    transition: color var(--transition-speed);
+}
+
+.footer-links a:hover {
+    color: var(--color-memoria);
+}
+
+/* =========================================
+   RESPONSIVIDAD
+   ========================================= */
+@media (max-width: 768px) {
+    .hero, .info-block, .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right-group {
+        align-items: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header-flex .section-title {
+    margin-bottom: 0;
+}
+
+/* Bloque de texto centrado para la sección de juegos */
+.text-block-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .text-block-2col {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* =========================================
+   ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
+   ========================================= */
+.faq-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.faq-item {
+    
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Contenedor de la respuesta oculto por defecto */
+.faq-answer-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq-answer {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Estado activo cuando se despliega */
+.faq-item.active .faq-answer-container {
+    max-height: 200px; /* Altura máxima estimada para que quepa el texto */
+    padding: 0 20px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(90deg); /* Rota la flechita hacia abajo */
+}
+
+/* =========================================
+   ESTILOS DEL JUEGO DE MEMORIA
+========================================= */
+.game-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    perspective: 1000px; /* Necesario para el efecto 3D */
+}
+
+.memory-card {
+    aspect-ratio: 1 / 1;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Clase que se añade con JS para voltear la carta */
+.memory-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.memory-card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la parte trasera de la cara al girar */
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+/* El reverso de la carta (lo que se ve antes de jugar) */
+.memory-card-front {
+    background-color: var(--color-cards);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.memory-card-front::after {
+    content: '?';
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* El anverso de la carta (donde está la imagen/icono) */
+.memory-card-back {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+    border: 2px solid var(--border-color);
+}
+
+.btn-juego {
+    background-color: #1e6b22; /* Un verde acorde a tus títulos */
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px; /* Forma de píldora redondeada */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(30, 107, 34, 0.2);
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+.btn-juego:hover {
+    background-color: #144d18; /* Verde un poco más oscuro */
+    transform: translateY(-2px); /* Se eleva ligeramente */
+    box-shadow: 0 6px 15px rgba(30, 107, 34, 0.3);
+}
+
+.btn-juego:active {
+    transform: translateY(1px); /* Se hunde al pulsar */
+    box-shadow: 0 2px 5px rgba(30, 107, 34, 0.2);
+}
+
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    .memory-board {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .game-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* =========================================
+   ESTILOS JUEGO: COMPLETA LA PALABRA
+========================================= */
+.word-game-board {
+    animation: fadeIn 0.4s ease-in-out;
+    background-color: #fafdfd;
+    border: 2px solid var(--color-cards);
+    border-radius: var(--border-radius);
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04); /* Sombra más envolvente y suave */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto tridimensional sutil en las cajas de letras base */
+.letter-box {
+    width: 60px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    background-color: white;
+    border: 2px solid var(--color-cards);
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); /* Da sensación de relieve tipo ficha */
+    transition: all 0.3s ease;
+}
+
+.letter-box.empty {
+    background-color: transparent;
+    border: 2px dashed #8ab8b6;
+    color: transparent;
+    box-shadow: none;
+}
+
+/* Botones de opciones con mejor respuesta visual e interactiva */
+.btn-letter {
+    background-color: var(--color-cards);
+    color: #1a3b39;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(189, 230, 228, 0.5); /* Sombra difuminada acorde al color turquesa */
+}
+
+.btn-letter:hover:not(:disabled) {
+    background-color: #a6d4d2;
+    transform: translateY(-3px); /* Se eleva un poco más al pasar el ratón */
+    box-shadow: 0 6px 15px rgba(166, 212, 210, 0.6);
+}
+
+.btn-letter:active:not(:disabled) {
+    transform: translateY(0px);
+}
+
+/* Estilo para los botones de selección de nivel inicial */
+.btn-nivel {
+    background-color: var(--color-cards);
+    color: #1a3b39;
+    border: 2px solid #9bc9c7;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.btn-nivel:hover {
+    background-color: #a6d4d2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.word-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-juego.btn-cambiar {
+    background-color: var(--card-bg-1); 
+    color: var(--text-dark);
+}
+
+.btn-juego.btn-cambiar:hover {
+    background-color: var(--bg-secondary);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria Viva | Empareja las imágenes</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="funciones.js" defer></script> 
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="Logotipo de Memoria Viva" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Inicio</a></li>
+                    <li><a href="juegos.html" class="nav-item active">Juegos</a></li>
+                    <li><a href="acompanamiento.html" class="nav-item">Acompañamiento</a></li>
+                    <li><a href="recursos.html" class="nav-item">Recursos útiles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section active section-padding">
+            <div class="container" style="text-align: center; max-width: 800px;">
+                <h1 style="color: var(--color-memoria); margin-bottom: 10px;">Empareja las imágenes</h1>
+                <p style="color: var(--text-light); margin-bottom: 30px;">Encuentra las parejas iguales para ejercitar la memoria visual. Tómate tu tiempo y hazlo a tu ritmo.</p>
+                
+                <!-- Panel de controles -->
+                <div class="game-stats">
+                    <span>Movimientos: <strong id="movimientos">0</strong></span>
+                    <span>Tiempo: <strong id="tiempo">0s</strong></span>
+                    <button id="reiniciar" class="btn-juego">Reiniciar juego</button>
+                </div>
+
+                <!-- Tablero donde se inyectarán las cartas desde JS -->
+                <div class="memory-board" id="tablero"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="imagenes/Logo.png" alt="Logotipo de Memoria Viva" class="logo-img">
+            </div>
+            <div class="footer-right-group">
+                <div class="footer-info">
+                    <p>Información y recursos sobre el Alzheimer</p>
+                    <p class="copyright">&copy; 2026 - Proyecto académico</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Contacto</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Aviso legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

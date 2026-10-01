@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria Viva | Inicio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="funciones.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="Logotipo de Memoria Viva" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item active">Inicio</a></li>
+                    <li><a href="juegos.html" class="nav-item">Juegos</a></li>
+                    <li><a href="acompanamiento.html" class="nav-item">Acompañamiento</a></li>
+                    <li><a href="recursos.html" class="nav-item">Recursos útiles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section active">
+            <!-- 1. Sección Hero Principal -->
+            <div class="container hero">
+                <div class="hero-text">
+                    <h1>Juntos frente<br>al Alzheimer</h1>
+                    <p>Descubre recursos, juegos y consejos para comprender el Alzheimer y acompañar a las personas que conviven con la enfermedad.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="imagenes/Inicio hero.png" alt="Ilustración de una mujer mayor tejiendo lana amarilla junto a un niño sentado en el suelo en un salón" style="width: 100%; height: auto; border-radius: 16px;">
+                </div>
+            </div>
+
+            <!-- 2. Sección ¿Qué encontrarás? (Grid de 4 tarjetas) -->
+            <div class="container section-padding">
+                <h2 class="section-title">¿Qué encontrarás?</h2>
+                <div class="grid-4">
+                    <div class="card card-info">
+                        <img src="imagenes/Icon info .png" alt="Icono de información" class="card-icon">
+                        <h3>Información</h3>
+                        <p>Conoce qué es el Alzheimer, sus síntomas, las diferentes etapas de la enfermedad y cómo puede afectar a la vida diaria.</p>
+                        <a href="#info" class="card-link">Saber más &rarr;</a>
+                    </div>
+                    <div class="card card-acompanamiento">
+                        <img src="imagenes/Icon acompa.png" alt="Icono de acompañamiento" class="card-icon">
+                        <h3>Acompañamiento</h3>
+                        <p>Encuentra consejos prácticos y orientación para acompañar a una persona con Alzheimer y afrontar el cuidado diario con mayor seguridad.</p>
+                        <a href="acompanamiento.html" class="card-link">Saber más &rarr;</a>
+                    </div>
+                    <div class="card card-juegos">
+                        <img src="imagenes/Icon juegos.png" alt="Icono de juegos" class="card-icon">
+                        <h3>Juegos</h3>
+                        <p>Estimula la memoria, la atención y el lenguaje con juegos sencillos diseñados para favorecer la actividad cognitiva.</p>
+                        <a href="juegos.html" class="card-link">Saber más &rarr;</a>
+                    </div>
+                    <div class="card card-recursos">
+                        <img src="imagenes/Icon recursos.png" alt="Icono de recursos" class="card-icon">
+                        <h3>Recursos útiles</h3>
+                        <p>Accede a guías, asociaciones, libros y otros recursos de confianza para ampliar información y encontrar apoyo.</p>
+                        <a href="recursos.html" class="card-link">Saber más &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Sección Sobre el Alzheimer -->
+            <div class="container info-block" id="info">
+                <div class="info-text">
+                    <span class="subtitle">ENTENDER ES EL PRIMER PASO PARA CUIDAR MEJOR</span>
+                    <h2>Sobre el Alzheimer</h2>
+                    <p>El Alzheimer es una enfermedad que afecta a la memoria y otras capacidades cognitivas. Comprenderla es el primer paso para ofrecer un mejor apoyo.</p>
+                    <a href="#" class="btn-link">Saber más &rarr;</a>
+                </div>
+                <div class="info-image">
+                    <img src="imagenes/home_sobre el alzheimer.png" alt="Ilustración de un hombre mayor sentado en un sillón con expresión de duda y piezas de puzle" style="width: 100%; height: auto; border-radius: 16px;">
+                </div>
+            </div>
+
+            <!-- 4. Sección Juegos y actividades -->
+            
+               <div class="container">
+                <div class="info-block-reverse">
+                    <div class="info-text">
+                        <h2>Juegos y actividades</h2>
+                        <p>Descubre juegos diseñados para estimular la memoria, la atención y otras capacidades cognitivas de forma sencilla y entretenida.</p>
+                        <a href="juegos.html" class="btn-link">Descubrir juegos &rarr;</a>
+                    </div>
+                    <div class="info-image">
+                        <img src="imagenes/home_juegosy actividades.png" alt="Ilustración de personas mayores jugando al bingo y cantando línea o bingo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Sección Newsletter (con fondo de color e imagen a la derecha) -->
+            <div class="newsletter-section">
+    <div class="container newsletter-content">
+        <div class="newsletter-text">
+            <h2>Newsletter</h2>
+            <p>Recibe contenido útil cada semana</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Tu correo..." required>
+                <button type="submit" class="btn-primary">Suscribirse</button>
+            </form>
+            <p id="newsletterMessage" class="newsletter-success-msg" style="display: none;"></p>
+        </div>
+        <div class="newsletter-image">
+            <img src="imagenes/newsletter.png" alt="Ilustración decorativa de la newsletter">
+        </div>
+    </div>
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="imagenes/Logo.png" alt="Logotipo de Memoria Viva" class="logo-img">
+            </div>
+            
+            <div class="footer-right-group">
+                <div class="footer-info">
+                    <p>Información y recursos sobre el Alzheimer</p>
+                    <p class="copyright">&copy; 2026 - Proyecto académico</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Contacto</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Aviso legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
